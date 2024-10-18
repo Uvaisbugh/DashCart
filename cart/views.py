@@ -34,16 +34,22 @@ def add_cart(request,product_id):
     return redirect('cart:cart_detail')
 
 
-def cart_detail(request,total=0,counter=0,cart_items=None):
+def cart_detail(request, total=0, counter=0, cart_items=None):
     try:
-        cart=Cart.objects.get(cart_id=_Cart_id(request))
-        cart_items=CartItem.objects.filter(cart=cart,active=True)
+        cart = Cart.objects.get(cart_id=_Cart_id(request))
+
+        cart_items = CartItem.objects.filter(cart=cart, active=True)
         for cart_item in cart_items:
-            total+=(cart_item.product.price * cart_item.quantity)
-            counter+= cart_item.quantity
+            total += (cart_item.product.price * cart_item.quantity)
+            counter += cart_item.quantity
+
     except ObjectDoesNotExist:
         pass
-    return render(request,'cart.html',dict(cart_items=cart_items,total=total,counter=counter))
+    return render(request, "cart.html", {
+        "cart_items": cart_items,
+        "total": total,
+        "counter": counter
+    })
 
 
 def cart_remove(request,product_id):
