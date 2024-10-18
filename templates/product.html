@@ -21,12 +21,12 @@
       <br>
       <div class="row">
         <div class="col-12  col-md-12 col-sm-12 col-lg-6 text-center">
-            <div style="min-width:18rem;">
-              <img src="{{product.image.url}}" alt="{{product.name}}" width="250px" height="350px">
+            <div class="product-img" style="min-width:18rem; ">
+              <img src="{{product.image.url}}" alt="{{product.name}}" width="350px" height="auto">
             </div>
         </div>
 
-    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6" style="height: 10rem;">
       <h1 class="my_product_title">{{product.name}}</h1>
       <p class="my_title"> $ {{product.price}}</p>
       <p class="text-justify my_product_des">{{product.description}}</p>
