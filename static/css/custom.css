@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
 .nav-item{
     letter-spacing : .2em;
     font-size : 14px;
@@ -12,10 +17,7 @@
     text-transform : uppercase;
     font-family: 'Open Sans', sans-serif;
 }
-.my_footer {
-  background-color :#e5d8d8;
-  height: 60px;
-}
+
 .my_footer p {
     padding-top:20px;
     font-size:14px;
@@ -112,4 +114,35 @@
 }
 .my_custom_button{
  margin-top:5px;
+}
+.product-img{
+  width:100%;
+  height:auto;
+  max-width:150px;
+  max-height:150px;
+  margin-bottom:15px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.05);
+  }  
+}
+.my_footer {
+  background-color :#8ecae6;
+  height: 60px;
+  padding-top:10px;
+  text-align: center;
+  color:#fff;
+  padding: 20px 0;
+
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+.content {
+  flex: 1;
 }
