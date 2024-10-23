@@ -15,7 +15,6 @@
 - **Python**: Backend logic
 - **Django**: Web framework
 - **HTML/CSS**: Frontend design
-- **JavaScript**: Client-side interactivity
 - **SQLite**: Default database (can be replaced by PostgreSQL or MySQL)
 - **Bootstrap**: For styling and responsive design
 
